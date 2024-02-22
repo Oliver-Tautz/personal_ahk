@@ -1,0 +1,2 @@
+﻿esc::capslock
+capslock::esc
