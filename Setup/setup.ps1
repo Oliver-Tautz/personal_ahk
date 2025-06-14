@@ -8,7 +8,7 @@ Set-Location -Path $startupPath
 git init
 
 # Add GitHub repo as remote
-git remote add origin git@github.com:Oliver-Tautz/personal_ahk.git
+git remote add origin https://github.com/Oliver-Tautz/personal_ahk.git
 
 # Optional: Ensure your SSH key is loaded (for GitHub authentication)
 # If using Windows OpenSSH agent (requires setup), uncomment:
