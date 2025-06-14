@@ -23,7 +23,14 @@ choco install git -y
 
 ## Scoop
 
-Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression# Check if Scoop is already installed
+if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+}
+else {
+    Write-Host "Scoop is already installed. Continuing..."
+}
+
 scoop bucket add extras
 
 refreshenv
