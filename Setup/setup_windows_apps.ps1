@@ -19,11 +19,13 @@ refreshenv
 
 
 choco install git -y
+choco install autohotkey -y --version=2.0.14
+
 
 
 ## Scoop
 
-Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression# Check if Scoop is already installed
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression # Check if Scoop is already installed
 if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
     Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 }
@@ -38,4 +40,10 @@ refreshenv
 
 ## Scoop packages
 
-scoop install extras/vscode
+scoop install extras/vscode 
+scoop isntall 7zip
+
+
+# App Store Packages
+winget install --id=9NCBCSZSJRSB --source=msstore --accept-package-agreements --accept-source-agreements --silent  # Spotify
+winget install --id=9NKSQGP7F2NH --source=msstore --accept-package-agreements --accept-source-agreements --silent  # WhatsApp
