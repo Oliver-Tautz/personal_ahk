@@ -47,3 +47,5 @@ scoop isntall 7zip
 # App Store Packages
 winget install --id=9NCBCSZSJRSB --source=msstore --accept-package-agreements --accept-source-agreements --silent  # Spotify
 winget install --id=9NKSQGP7F2NH --source=msstore --accept-package-agreements --accept-source-agreements --silent  # WhatsApp
+winget install --id=XP99K37G9CWBDC --source=msstore --accept-package-agreements --accept-source-agreements --silent #Todoist
+
