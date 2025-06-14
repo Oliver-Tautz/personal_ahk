@@ -21,12 +21,9 @@ refreshenv
 choco install git -y
 choco install autohotkey.portable --pre -y
 
-
-
-
 ## Scoop
 
-Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression # Check if Scoop is already installed
+# Check if Scoop is already installed
 if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
     Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 }
