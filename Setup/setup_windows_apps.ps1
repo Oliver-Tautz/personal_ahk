@@ -13,17 +13,22 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;
 # https://chocolatey.org/install
 iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
+refreshenv
 
 ## Choco packages
 
-# Run choco install git in a new PowerShell session
-Start-Process powershell.exe -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command "choco install git -y"'
+
+choco install git -y
 
 
 ## Scoop
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+scoop bucket add extras
+
+refreshenv
+
 
 ## Scoop packages
 
-Start-Process powershell.exe -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command "scoop install vscode"'
+scoop install extras/vscode
