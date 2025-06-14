@@ -19,7 +19,8 @@ refreshenv
 
 
 choco install git -y
-choco install autohotkey -y --version=2.0.14
+choco install autohotkey.portable --pre -y
+
 
 
 
